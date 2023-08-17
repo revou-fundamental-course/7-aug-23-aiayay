@@ -1,0 +1,136 @@
+<html>
+    <head>
+        <title>website kalkulator matematik (segitiga)</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <div class="text-center">
+            <h2>welcome to katik</h2>
+            <p>hai sobat, selamat datang di katik</p>
+            <p>sebuah web apps sederhana yang berfungsi untuk menghitung nilai luas dan keliling bangun datar</p>
+            <br><br>
+        </div>
+    </head>
+    <body align="center">
+        <table border="1" align="center" cellpadding="1" cellspacing="0">
+                    <tr>
+                        <td align="center">Segitiga</td>
+                    </tr>
+                    <tr>
+                        <td align="center">Jajar Genjang</td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <h1>Luas Segitiga</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="gambar.jpg" alt="rumus" width="250" height="250">
+                            <p>Rumus Luas Segitiga yaitu:</p>
+                            <p align="center">L=1/2 x a x t</p>
+                            <p>Dimana:</p>
+                            <p>L=luas</p>
+                            <p>a=panjang alas</p>
+                            <p>t=tinggi</p>
+                        </td>
+                    </tr>
+                    <tr>
+                       <td align="center">
+                        <h1><b>Hitung Luas Segitiga</b></h1>
+                        <label for=""></label>
+                        <input type="number" id="alas" class="formluas" placeholder="nilai alas">
+                        <br><br>
+                        <label for=""></label>
+                        <input type="number" id="tinggi" class="formluas" placeholder="nilai tinggi">
+                        <br><br>
+                        <button id="hitung" class="hitung">hitung</button>
+                        <div id="output"></div>
+                        <script>
+                            const alas = document.getElementById('alas')
+                            const tinggi = document.getElementById('tinggi')
+                            const hitung = document.getElementById('hitung')
+                            const output = document.getElementById('output')
+                            hitung.addEventListener('click', function(){
+                                let a = alas.value
+                                let t = tinggi.value
+                                let l = 0.5*a*t
+                                output.innerHTML = 
+                                `L=1/2 x a x t 
+                                <br><br>
+                                L= 1/2 x ${a} x ${t} 
+                                <br><br>
+                                L= ${l}` 
+                            })
+                        </script>
+                        <br><br>
+                        <button type="reset" name="reset" class="reset">reset</button>
+                       </td>
+                    </tr>
+        </table>
+        <br><br><br><br><br><br><br>
+        <table border="1" align="center" cellpadding="1" cellspacing="0">
+            <tr>
+                <td align="center">Segitiga</td>
+            </tr>
+            <tr>
+                <td align="center">Jajar Genjang</td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <h1>Keliling Segitiga</h1>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="gambar">
+                        <img src="keliling.jpg" alt="rumus" width="250" height="250">
+                    </div>
+                    <p>Rumus Keliling Segitiga yaitu:</p>
+                    <p align="center">K= s1 + s2 + s3</p>
+                    <p>Dimana:</p>
+                    <p>K= keliling</p>
+                    <p>s1= sisi A</p>
+                    <p>s2= sisi B</p>
+                    <p>s3= sisi C</p>
+                </td>
+            </tr>
+            <tr>
+               <td align="center">
+                <h1><b>Hitung Keliling Segitiga</b></h1>
+                <label for=""></label>
+                <input type="number" id="sisia" class="formkeliling" placeholder="nilai sisi A">
+                <br><br>
+                <label for=""></label>
+                <input type="number" id="sisib" class="formkeliling" placeholder="nilai sisi B">
+                <br><br>
+                <label for=""></label>
+                <input type="number" id="sisic" class="formkeliling" placeholder="nilai sisi C">
+                <br><br>
+                <button id="hitung2" class="hitung">hitung</button>
+                <div id="output2"></div>
+                <script>
+                    const sisia = document.getElementById('sisia')
+                    const sisib = document.getElementById('sisib')
+                    const sisic = document.getElementById('sisic')
+                    const hitung2 = document.getElementById('hitung2')
+                    const output2 = document.getElementById('output2')
+                    hitung2.addEventListener('click', function(){
+                        let s1 = sisia.value
+                        let s2 = sisib.value
+                        let s3 = sisic.value
+                        let k = s1 + s2 + s3
+                        output2.innerHTML = 
+                        `k = s1+s2+s3
+                        <br><br>
+                        K= ${s1} + ${s2} + ${s3} 
+                        <br><br>
+                        K= ${k}` 
+                    })
+                </script>
+                <br><br>
+                <button type="reset" name="reset" class="reset">reset</button>
+               </td>
+            </tr>
+</table>
+    </body>
+</html>
